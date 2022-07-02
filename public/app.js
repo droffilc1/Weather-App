@@ -1,16 +1,15 @@
-let weather = {
+let weather = {    
    "apiKey": "c91485daa5cdfafd235f465eb43f9439",
    fetchWeather: function(city) {
+
+      const url = `/api?q=${city}`
       fetch(
-         "https://api.openweathermap.org/data/2.5/weather?q=" 
-         + city 
-         + "&units=metric&appid="
-         + this.apiKey
+         url
       )
       .then((response) => response.json())
       .then((data) => this.displayWeather(data));
    },
-   displayWeather: function(data) {
+   displayWeather: function(data) {   
       const { name } = data;
       const { icon, description } = data.weather[0];
       const { temp, humidity } = data.main;
@@ -29,7 +28,7 @@ let weather = {
    }
 }
 
-document.querySelector(".search button").addEventListener("click", () => {
+document.querySelector(".search button").addEventListener('click', () => {
    weather.search();
 })
 
@@ -39,4 +38,4 @@ document.querySelector(".search-bar").addEventListener("keyup", (event) => {
    }
 
    weather.fetchWeather("Nairobi");
-})
+})                        
