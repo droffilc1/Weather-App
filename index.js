@@ -3,7 +3,10 @@ const cors = require('cors')
 const rateLimit = require('express-rate-limit')
 require('dotenv').config()
 
+
 const PORT = process.env.PORT || 5000
+
+
 
 const app = express()
 
@@ -30,3 +33,5 @@ app.use('/api', require('./routes'))
 app.use(cors())
 
 app.listen(PORT, () => console.log(`Sever running on port ${PORT}`))
+
+

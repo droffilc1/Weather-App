@@ -1,5 +1,5 @@
-let weather = {    
-   "apiKey": "c91485daa5cdfafd235f465eb43f9439",
+let weather = {   
+   "apikey": "process.env.API_KEY_VALUE",   
    fetchWeather: function(city) {
 
       const url = `/api?q=${city}`
