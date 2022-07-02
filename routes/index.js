@@ -14,7 +14,7 @@ const API_KEY_VALUE = process.env.API_KEY_VALUE
 
 let cache = apicache.middleware
 
-router.get('/', cache('2 minutes'), async(req, res) => {
+router.get('/', cache('10 seconds'), async(req, res) => {
 
    try {
       
