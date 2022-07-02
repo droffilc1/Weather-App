@@ -37,5 +37,5 @@ document.querySelector(".search-bar").addEventListener("keyup", (event) => {
       weather.search();
    }
 
-   weather.fetchWeather(city);
+   weather.fetchWeather("Nairobi");
 })                        
