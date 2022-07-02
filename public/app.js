@@ -36,6 +36,6 @@ document.querySelector(".search-bar").addEventListener("keyup", (event) => {
    if(event.key == "Enter"){
       weather.search();
    }
+})      
 
-   weather.fetchWeather("Nairobi");
-})                        
+weather.fetchWeather("Nairobi");
